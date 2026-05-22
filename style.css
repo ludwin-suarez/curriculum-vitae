@@ -1,0 +1,266 @@
+:root {
+    --azulino: #0056b3;       /* Azul Rey / Azulino */
+    --gris-fondo: #f1f4f8;    /* Gris muy claro para el fondo del sitio */
+    --blanco: #ffffff;
+    --texto-oscuro: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background-color: var(--gris-fondo); /* Fondo general gris claro */
+    color: var(--texto-oscuro);
+}
+
+header {
+    background-color: var(--azulino);
+    color: var(--blanco);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li { margin: 0 20px; }
+nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+
+/* Estilos de la Foto y Hero */
+#hero {
+    background-color: var(--blanco);
+    padding: 60px 20px;
+    border-bottom: 5px solid var(--azulino);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%; /* Foto circular */
+    border: 5px solid var(--azulino);
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.hero-text h1 { font-size: 2.5rem; margin: 0; }
+.hero-text h1 span { color: var(--azulino); }
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background: var(--blanco);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: var(--azulino);
+    border-bottom: 2px solid var(--gris-fondo);
+    padding-bottom: 10px;
+}
+
+.job {
+    margin-bottom: 20px;
+    border-left: 3px solid var(--azulino);
+    padding-left: 15px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-grid span {
+    background: var(--azulino);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.btn-main {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: var(--azulino);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    background-color: #003d7a;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: var(--texto-oscuro);
+    color: white;
+}
+
+/* ... (mantén los estilos de colores anteriores) ... */
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.job h3 {
+    margin: 0;
+    color: var(--azulino);
+    font-size: 1.2rem;
+}
+
+.role {
+    font-weight: bold;
+    color: #444;
+    margin-top: 2px;
+}
+
+ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.hero-tags {
+    margin-top: 15px;
+}
+
+.hero-tags span {
+    background: rgba(0, 86, 179, 0.1);
+    color: var(--azulino);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    margin-right: 10px;
+    border: 1px solid var(--azulino);
+}
+
+.edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 600px) {
+    .edu-grid { grid-template-columns: 1fr; }
+    .job-header { flex-direction: column; }
+}
+
+
+/* PARA FORMULARIO */
+/* Contenedor Flex para alinear formulario e información */
+.contacto-flex {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.form-container {
+    flex: 2;
+    min-width: 300px;
+}
+
+.info-directa {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Estilos de los campos de texto */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fcfcfc;
+    font-family: inherit;
+    box-sizing: border-box; /* Importante para que no se salga del contenedor */
+}
+
+.input-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Botón igual al de la imagen */
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--azulino);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #004494;
+}
+
+/* Lista de información directa */
+.info-directa ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-directa ul li {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-directa h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .contacto-flex {
+        flex-direction: column;
+    }
+}
